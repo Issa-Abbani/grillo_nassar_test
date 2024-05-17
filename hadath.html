@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Grillo Nassar</title>
+</head>
+<body>
+    <header>
+        
+  
+          <div>
+            <a href="index.html">
+             <img class="logo" src="Images/Logo.jpg" alt="Image Not Found">
+            </a>
+          </div>
+        
+
+        <ul class="hdrlist">
+            <li>
+                <i class="bi bi-clock"></i>
+                <span>1:00 pm - 12:45 am</span>
+            </li>
+            <li>
+                <i class="bi bi-geo-alt"></i>
+                <a class="loclink" href="https://www.google.com/maps/search/?api=1&query=%D8%A7%D9%84%D8%AC%D8%A7%D9%85%D9%88%D8%B3%20-%20%D9%82%D8%B1%D8%A8%20%D9%85%D8%AF%D8%B1%D8%B3%D8%A9%20%D8%A7%D9%84%D9%85%D9%87%D8%AF%D9%8A">الجاموس - قرب مدرسة المهدي</a>
+            </li>
+            <li>
+                <i class="bi bi-currency-dollar"></i>
+                <span>سعر الصرف الحالي (90,000)</span>
+            </li>
+
+            <li>
+                <i class="bi bi-telephone"></i>
+                <a class="phone" href="tel:81726561">81726561  </a> <span>  OR  </span><a href="https://api.whatsapp.com/send?phone=81726561" class="wapp-link">   <i class="bi bi-whatsapp wapp"></i>  Whatsapp</a>
+            </li>
+        </ul>
+
+
+
+        <button class="btn btn-primary" id="sidebar-bttn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+            <i class="bi bi-list"></i>
+          </button>
+
+
+
+    </header>
+
+    <nav>
+         
+
+          
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+            <div class="offcanvas-header" id="sidebar-header">
+              <h4 class="offcanvas-title" id="offcanvasExampleLabel">Menu Items</h4>
+              <button type="button" id="closebttn" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+
+
+                <div id="side-items">
+                    <div class="row align-items-center justify-content-center nav nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                      <button class="nav-link active col-lg-12 col-md-12 col-sm-12" id="v-pills-appetizers-tab" data-bs-toggle="pill" data-bs-target="#v-pills-appetizers" type="button" role="tab" aria-controls="v-pills-appetizers" aria-selected="true">Appetizers</button>
+                      <button class="nav-link col-lg-12 col-md-12 col-sm-12" id="v-pills-salads-tab" data-bs-toggle="pill" data-bs-target="#v-pills-salads" type="button" role="tab" aria-controls="v-pills-salads" aria-selected="false">Salads</button>
+                      <button class="nav-link col-lg-12 col-md-12 col-sm-12" id="v-pills-pans-tab" data-bs-toggle="pill" data-bs-target="#v-pills-pans" type="button" role="tab" aria-controls="v-pills-pans" aria-selected="false">Pans (مقلاية)</button>
+                      <button class="nav-link col-lg-12 col-md-12 col-sm-12" id="v-pills-plates-tab" data-bs-toggle="pill" data-bs-target="#v-pills-plates" type="button" role="tab" aria-controls="v-pills-plates" aria-selected="false">Plates</button>
+                      <button class="nav-link col-lg-12 col-md-12 col-sm-12" id="v-pills-meals-tab" data-bs-toggle="pill" data-bs-target="#v-pills-meals" type="button" role="tab" aria-controls="v-pills-meals" aria-selected="false">Meals</button>
+                      <button class="nav-link col-lg-12 col-md-12 col-sm-12" id="v-pills-rice-tab" data-bs-toggle="pill" data-bs-target="#v-pills-rice" type="button" role="tab" aria-controls="v-pills-rice" aria-selected="false">Rice Platters</button>
+                      <button class="nav-link col-lg-12 col-md-12 col-sm-12" id="v-pills-pasta-tab" data-bs-toggle="pill" data-bs-target="#v-pills-pasta" type="button" role="tab" aria-controls="v-pills-pasta" aria-selected="false">Pasta</button>
+                      <button class="nav-link col-lg-12 col-md-12 col-sm-12" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Burgers</button>
+                      <button class="nav-link col-lg-12 col-md-12 col-sm-12" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Chicken Burgers</button>
+                      <button class="nav-link col-lg-12 col-md-12 col-sm-12" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Snack Sandwiches</button>
+                      <button class="nav-link col-lg-12 col-md-12 col-sm-12" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">3al 3arabi</button>
+                      <button class="nav-link col-lg-12 col-md-12 col-sm-12" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Crêpe</button>
+                      <button class="nav-link col-lg-12 col-md-12 col-sm-12" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Dessert (dine in only)</button>
+                      <button class="nav-link col-lg-12 col-md-12 col-sm-12" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Ice cream</button>
+                      <button class="nav-link col-lg-12 col-md-12 col-sm-12" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Fresh juice</button>
+                      <button class="nav-link col-lg-12 col-md-12 col-sm-12" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Shakes</button>
+                      <button class="nav-link col-lg-12 col-md-12 col-sm-12" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Coffee (dine in only)</button>
+                      <button class="nav-link col-lg-12 col-md-12 col-sm-12" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Soft drink</button>
+                      <button class="nav-link col-lg-12 col-md-12 col-sm-12" id="v-pills-settings-tab" data-bs-toggle="pill" data-bs-target="#v-pills-settings" type="button" role="tab" aria-controls="v-pills-settings" aria-selected="false">Shisha (dine in only)</button>
+                      
+
+                  </div>
+
+            </div>
+          </div>
+
+
+    </nav>
+
+
+    <section>
+        <div class="tab-content" id="v-pills-tabContent">
+            
+            <div class="tab-pane fade show active" id="v-pills-appetizers" role="tabpanel" aria-labelledby="v-pills-appetizers-tab" tabindex="0">
+
+                <h2 class="section-title">Appetizers</h2>
+                
+                <div class="row section-content">
+                    
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                        
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                        
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                        
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                        
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                        
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                        
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                        
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                        
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                        
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+
+
+
+                </div>
+
+
+                    
+
+
+            </div>
+            
+            
+            
+            
+            
+            
+            
+            
+            <div class="tab-pane fade" id="v-pills-salads" role="tabpanel" aria-labelledby="v-pills-salads-tab" tabindex="0">
+
+
+
+
+
+
+
+
+                <h2 class="section-title">Salads</h2>
+
+
+                <div class="row section-content">
+                
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                            
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                            
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                            
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                            
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                            
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+                </div>
+                
+
+            </div>
+            
+            
+            <div class="tab-pane fade" id="v-pills-pans" role="tabpanel" aria-labelledby="v-pills-pans-tab" tabindex="0">
+                
+                <h2 class="section-title">Pans(مقلاية)</h2>
+
+                <div class="row section-content">
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                                
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                                
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                                
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                                
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                                
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                                
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                                
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+                </div>
+            
+            
+            </div>
+            
+            
+            
+            
+            <div class="tab-pane fade" id="v-pills-plates" role="tabpanel" aria-labelledby="v-pills-plates-tab" tabindex="0">
+
+
+                <h2 class="section-title">Plates</h2>
+
+                <div class="row section-content">
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                                
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                                
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                                
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                                
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                                
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                                
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+
+            </div>
+            
+            
+            
+            
+            
+            <div class="tab-pane fade" id="v-pills-meals" role="tabpanel" aria-labelledby="v-pills-meals-tab" tabindex="0">
+
+
+                <h2 class="section-title">Meals</h2>
+
+                <div class="row section-content">
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                                
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                                
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                                
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                                
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                                
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                                
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                                
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+            <div class="tab-pane fade" id="v-pills-rice" role="tabpanel" aria-labelledby="v-pills-rice-tab" tabindex="0">
+
+                <h2 class="section-title">Rice Platters</h2>
+
+                <div class="row section-content">
+
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                                
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                                
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                                
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                                
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+
+
+            <div class="tab-pane fade" id="v-pills-pasta" role="tabpanel" aria-labelledby="v-pills-pasta-tab" tabindex="0">
+
+                <h2 class="section-title">Pasta</h2>
+
+                <div class="row section-content">
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                                
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                                
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                                
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                                
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+                    <div class="col-xl-4 col-lg-6 col-md-6 col-sm-12 section-item">
+                                
+                        <div class="item-grid">
+                            <div>
+                                <p class="item-name">Menu Item Name</p>
+                                <p class="item-des">Menu Item Description</p>
+                                <p class="item-price">$NNN.NN</p>
+                            </div>
+
+                            <img src="Images/appetizers.jpg" alt="Image Not Found" class="item-img">
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="tab-pane fade" id="v-pills-meals" role="tabpanel" aria-labelledby="v-pills-meals-tab" tabindex="0"></div>
+
+
+            <div class="tab-pane fade" id="v-pills-meals" role="tabpanel" aria-labelledby="v-pills-meals-tab" tabindex="0"></div>
+
+
+            <div class="tab-pane fade" id="v-pills-meals" role="tabpanel" aria-labelledby="v-pills-meals-tab" tabindex="0"></div>
+
+
+            <div class="tab-pane fade" id="v-pills-meals" role="tabpanel" aria-labelledby="v-pills-meals-tab" tabindex="0"></div>
+        
+        
+        
+        
+        
+        
+        </div>
+
+
+
+
+    </section>
+
+    <footer>
+
+        <div class="footer-content row">
+            <div class="col-lg-4 col-md-6 col-sm-12 footer-elem">
+              <p>Grillo Nassar</p>
+              <p>
+                <i class="bi bi-clock"></i>
+                <span>1:00 pm - 12:45 am</span>
+              </p>
+              
+              <p class="localink">
+                <i class="bi bi-geo-alt"></i>
+                <a class="loclink" href="https://www.google.com/maps/search/?api=1&query=%D8%A7%D9%84%D8%AC%D8%A7%D9%85%D9%88%D8%B3%20-%20%D9%82%D8%B1%D8%A8%20%D9%85%D8%AF%D8%B1%D8%B3%D8%A9%20%D8%A7%D9%84%D9%85%D9%87%D8%AF%D9%8A">الجاموس - قرب مدرسة المهدي</a>
+              </p>
+
+              
+              <p>
+                <i class="bi bi-currency-dollar"></i>
+                <span>81726561 سعر الصرف الحالي (90)</span>
+              </p>
+
+              <p>
+                <i class="bi bi-telephone"></i>
+                <a class="phone-call" href="tel:81726561">81726561</a>
+              </p>
+            </div>
+
+            <div class="col-lg-4 col-md-6 col-sm-12 footer-elem">
+                <p>Our delivery usually takes between 25 to 40 minutes <strong>MAX!!</strong></p>
+                <a href="https://api.whatsapp.com/send?phone=81726561" class="whatsapp-link">Click here to add our Whatsapp Number to get notified about the latest offers & events!<span><i class="bi bi-whatsapp whatsapp"></i></span></a>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>   
+</body>
+</html>

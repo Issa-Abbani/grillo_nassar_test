@@ -1,0 +1,207 @@
+body {
+    background-image: url(Images/bgimage.jpg);
+    background-position: center;
+    margin-left: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-top: 0;
+    overflow-x: hidden;
+}
+
+.branch-selector {
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 0 300px;
+    gap: 5vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.branch-bttn {
+    width: 30vw;
+    height: 30vw;
+    border: solid #b61414;
+    background: url(Images/grillbg.jpg);
+    background-position: center;
+    background-size: 180%;
+    background-repeat: no-repeat;
+    filter: grayscale(100%);
+    color: white;
+    font-weight: bold;
+    font-size: 3em;
+    color: white;
+    transition: 0.2s
+}
+
+.branch-bttn:hover {
+    color: #9d3e12;
+    filter: grayscale(0%);
+    scale: 1.1;
+    box-shadow: 0 0 15px #801111;
+    font-size: 3.5em;
+}
+
+.branch-bttn:active {
+    color: white;
+    box-shadow: 0 0 25px #801111;
+    font-size: 2.5em;
+    filter: saturate(250%);
+}
+
+
+
+/* Media Styles for responsiveness arranged in order */
+
+@media (min-width:1200px){
+    .logo {
+        width: 150px;
+        height: 150px;
+        margin-left: 15%;
+        border-radius: 50% ;
+    }
+
+    .hdrlist {
+        list-style: none;
+        line-height: 275%;
+        margin-right: 70%;
+        margin-top: 1%;
+        font-size: 0.8rem;
+    }
+
+    footer {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 70vh;
+        margin-bottom: 0px;
+        margin-top: 6%;
+        background-image: linear-gradient(to bottom, rgb(75, 13, 13) , #801111, #b20909);
+        box-shadow: 0 0 10vh rgb(114, 20, 20);
+     }
+
+
+
+}
+
+@media (min-width:992px) and (max-width:1199px){
+    .logo {
+        width: 125px;
+        height: 125px;
+        margin-left: 10%;
+        border-radius: 50% ;
+    }
+
+    .hdrlist {
+        list-style: none;
+        line-height: 270%;
+        margin-right: 50%;
+        margin-top: 1%;
+        font-size: 1rem;
+    }
+
+
+    footer {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 70vh;
+        margin-bottom: 0px;
+        margin-top: 6%;
+        background-image: linear-gradient(to bottom, rgb(75, 13, 13) , #801111, #b20909);
+        box-shadow: 0 0 10vh rgb(114, 20, 20);
+     }
+
+
+}
+
+@media (min-width:768px) and (max-width:991px){
+    .logo {
+        width: 100px;
+        height: 100px;
+        margin-left: 15%;
+        border-radius: 50% ;
+    }
+
+    .hdrlist {
+        list-style: none;
+        line-height: 200%;
+        margin-right: 60%;
+        font-size: 0.8em;
+    }
+
+    .branch-selector{
+        margin-bottom: 50%;
+        margin-top: 40%;
+    }
+
+    .branch-bttn{
+        font-size: 2em;
+        width: 300px;
+        height: 300px;
+    }
+
+    .branch-bttn:hover{
+        scale: 1.1;
+        font-size: 2.5em;
+    }
+
+
+    footer {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 40vh;
+        margin-bottom: 0px;
+        margin-top: 6%;
+        background-image: linear-gradient(to left, #801111, #b20909, rgb(209, 29, 29));
+        box-shadow: 0 0 10vh rgb(114, 20, 20);
+     }
+
+
+}
+
+@media (max-width:768px){
+    .logo {
+        width: 90px;
+        height: 90px;
+        margin-left: 15%;
+        border-radius: 50% ;
+    }
+
+    .hdrlist {
+        list-style: none;
+        line-height: 200%;
+        margin-right: 25%;
+        margin-top: 1%;
+        font-size: 0.7rem;
+    }
+
+    .branch-bttn{
+        font-size: 1.5em;
+        width: 200px;
+        height: 200px;
+    }
+
+    .branch-bttn:hover{
+        scale: 1.1;
+        font-size: 1.6em;
+    }
+
+    .branch-selector {
+        margin-bottom: 50%;
+        margin-top: 30%;
+        gap: 10vw;
+    }
+
+
+    footer {
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 90vh;
+        margin-bottom: 0px;
+        margin-top: 6%;
+        background-image: linear-gradient(to bottom, rgb(75, 13, 13) , #801111, #b20909);
+        box-shadow: 0 0 10vh rgb(114, 20, 20);
+     }
+}
